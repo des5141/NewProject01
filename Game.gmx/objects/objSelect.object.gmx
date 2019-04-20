@@ -70,11 +70,8 @@ select = 0; // -1 is left, 0 is none, 1 is right
 }
 
 if ( select == 0 ) {
-    draw_set_alpha(0.5);
-    draw_set_color(c_black);
-    draw_rectangle(room_width/2 - 200, 110, room_width/2 + 200, 300, false);
-    draw_set_alpha(1);
-    
+    hj_set_align(fa_center, fa_middle);
+    hj_draw(room_width/2, 50, global.main_text[global.mySelect], c_black, 1);
 }
 </string>
           </argument>

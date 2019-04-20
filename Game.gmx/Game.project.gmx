@@ -107,6 +107,10 @@
     <sprite>sprites\sprHanH12</sprite>
     <sprite>sprites\sprHangul24</sprite>
     <sprite>sprites\sprYayoC64</sprite>
+    <sprite>sprites\sprX</sprite>
+    <sprite>sprites\sprO</sprite>
+    <sprite>sprites\sprOpenDoor</sprite>
+    <sprite>sprites\sprImage</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgIntro</background>
@@ -183,6 +187,7 @@
       <script>scripts\hj_set_align.gml</script>
       <script>scripts\hj_end.gml</script>
     </scripts>
+    <script>scripts\imageAdd.gml</script>
   </scripts>
   <fonts name="fonts"/>
   <objects name="objects">
@@ -205,7 +210,11 @@
       <object>objects\objDoor</object>
       <object>objects\objBackground</object>
       <object>objects\objGotoBackground</object>
+      <object>objects\objGotoSelect</object>
     </objects>
+    <object>objects\object14</object>
+    <object>objects\object15</object>
+    <object>objects\objOpenDoor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmBasic</room>

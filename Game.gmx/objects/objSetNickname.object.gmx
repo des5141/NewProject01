@@ -60,6 +60,7 @@ alarm[1] = 60;
 click = false;
 scale = 0;
 nonickname = "";
+nonickname_color = c_black;
 shake = 0;
 shakeit = 0;
 msg = -1;
@@ -170,11 +171,30 @@ trigger = true;
           <argument>
             <kind>1</kind>
             <string>/// Event User 0
+global.nickname = string_replace_all(global.nickname, " ", "");
 if ( global.nickname = "" ) {
     shake = 10;
     nonickname = "넌 이름도 없니?";
+    nonickname_color = c_black;
+}else if ( string_pos(global.nickname, "개발자") != 0) {
+    shake = 10;
+    nonickname = "얘가 아주 싸가지도 없이#내 이름을 사용하려고? 앙?";
+    nonickname_color = c_red;
+}if ( string_pos(global.nickname, "손잡이") != 0) {
+    shake = 10;
+    nonickname = "손잡이로 뭘 하려고?";
+    nonickname_color = c_orange;
+}else if ( string_pos(global.nickname, "정현") != 0) {
+    nonickname = "나랑 같은 이름이구나!";
+    nonickname_color = c_black;
+    goto_next = true;
+}else if ( string_pos(global.nickname, "샌즈") != 0) {
+    shake = 20;
+    nonickname = "언더테일 아시는구나! 혹시 모르시는분들에 대해#설명해드립니다 샌즈랑 언더테일의 세가지 엔딩루트중#몰살엔딩의 최종보스로 진.짜.겁.나.어.렵.습.니.다 공격은#전부다 회피하고 만피가 92인데 샌즈의 공격은 1초당 60이#다는데다가 독뎀까지 추가로 붙어있습니다.. 하지만 이러면#절대로 게임을 깰 수가 없으니 제작진이 치명적인 약점을#만들었죠. 새즌의 치명적인 약점이 바로 지친다는 것입니다.#패턴들을 다 견디고나면 지쳐서 자신의 턴을 유지한채로#잠에듭니다. 하지만 잠이들었을때 창을 옮겨서 공격을 시도하고#샌즈는 1차공격은 피하지만 그 후에 바로 날아오는#2차공격을 맞고 죽습니다.";
+    nonickname_color = c_purple;
 }else {
     nonickname = "굉장히 좋은 이름이구나! ^오^";
+    nonickname_color = c_black;
     goto_next = true;
 }
 </string>
@@ -240,7 +260,9 @@ hj_draw(room_width/2, room_height/2 - 40 - ease_in_out_back((1/120)*step[2])*300
 draw_set_alpha(ease_in_cubic((1/60)*min(60, step[1])));
 hj_draw(room_width/2, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, "너의 이름은 뭐니?", c_black, ease_in_cubic((1/60)*min(60, step[1])));
 }else {
-hj_draw(room_width/2 + shakeit, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, nonickname, c_black, 1);
+hj_set_align(fa_center, fa_top)
+hj_draw(room_width/2 + shakeit, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, nonickname, nonickname_color, 1);
+hj_set_align(fa_center, fa_middle)
 }
 draw_set_alpha(ease_in_out_cubic((1/60)*step[3]));
 

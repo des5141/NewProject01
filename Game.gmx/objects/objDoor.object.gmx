@@ -30,6 +30,179 @@ image_yscale = 0.8;
 image_alpha = 0;
 click = 0;
 trigger = false;
+trigger2 = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.imageMax = 0;
+switch(global.mySelect) {
+    case 0:
+        if(type == 1) {
+            global.mySelect = 1;
+            room_restart();
+        } else
+          room_goto(rmStart);  
+        break;
+        
+    case 1:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(3);
+            imageAdd(0);
+            scTreeAdd("어느 단란한 가정에 태어났다", c_white);
+            global.mySelect = 2;
+        } else{
+            imageAdd(0);
+            imageAdd(3);
+            imageAdd(0);
+            scTreeAdd("외국인 가족에게 입양되었다", c_orange);
+            global.mySelect = 2;
+        }
+        break;
+    case 2:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(9);
+            imageAdd(0);
+            scTreeAdd("학교생활은 충실히 잘했다. 친구도 많았다.", c_white);
+            global.mySelect = 3;
+        } else{
+            imageAdd(0);
+            imageAdd(2);
+            imageAdd(0);
+            scTreeAdd("면접 본 고등학교를 아싸로 보냈다.. 외로웠다..", c_gray);
+            global.mySelect = 5;
+        }
+        break;
+    case 3:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(9);
+            imageAdd(6);
+            imageAdd(0);
+            scTreeAdd("친구랑 함께 손잡고 치킨집을 창업했다", c_orange);
+            global.mySelect = 4;
+        } else{
+            imageAdd(0);
+            imageAdd(7);
+            imageAdd(0);
+            scTreeAdd("회사를 다니기 시작했다", c_white);
+            global.mySelect = 4;
+        }
+        break;
+    case 4:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(4);
+            imageAdd(5);
+            imageAdd(6);
+            imageAdd(0);
+            scTreeAdd("그동안 모은 돈을 주식으로 전부 날려 강에 몸을 마겼다", c_red);
+            global.gameEnd = true;
+        } else{
+            imageAdd(0);
+            imageAdd(7);
+            imageAdd(0);
+            scTreeAdd("갑자기 닭값이 올라 손해가 커져 망해버렸다", c_red);
+            global.gameEnd = true;
+        }
+        break;
+        
+    case 5:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(1);
+            imageAdd(0);
+            scTreeAdd("주변에서 나를 손가락질하며 까내렸지만, 프로그래머의 꿈을 꿨다", c_white);
+            
+            global.mySelect = 6;
+        } else{
+            imageAdd(0);
+            imageAdd(5);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("꿈이 없다. 목표가 없다. 더 이상 살기가 싫다.", c_red);
+            global.gameEnd = true;
+        }
+        break;
+        
+    case 6:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(7);
+            imageAdd(0);
+            scTreeAdd("취업을 하였다", c_white);
+            
+            global.mySelect = 7;
+        } else{
+            imageAdd(0);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("취업을 하지않고 백수로 지내기 시작했다", c_green);
+            global.mySelect = 7;
+        }
+        break;
+        
+    
+    case 7:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(9);
+            imageAdd(6);
+            imageAdd(0);
+            scTreeAdd("창업을 하였다", c_white);
+            global.mySelect = 8;
+        } else{
+            imageAdd(0);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("백수로 살다가 부모님의 등짝스매시로 인해 심장마비사 했다.", c_red);
+            global.gameEnd = true;
+        }
+        break;
+        
+    case 8:
+        if(type == 1) {
+            imageAdd(0);
+            imageAdd(9);
+            imageAdd(4);
+            imageAdd(5);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("주식 투자에 실패하여, 강에서 뛰어내렸다.", c_red);
+            global.gameEnd = true;
+        } else{
+            imageAdd(0);
+            imageAdd(4);
+            imageAdd(5);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("사업이 망해, 강에서 뛰어내렸다.", c_red);
+            global.gameEnd = true;
+        }
+        break;   
+}
+
+instance_create(0, 0, objGotoBackground);
 </string>
           </argument>
         </arguments>
@@ -125,6 +298,10 @@ click = false
           <argument>
             <kind>1</kind>
             <string>objSelect.select = type
+alarm[0] = 60;
+instance_destroy(object14);
+instance_destroy(object15);
+trigger2 = true;
 </string>
           </argument>
         </arguments>
@@ -147,24 +324,27 @@ click = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ( click ) {
-    image_xscale += ( 0.7 - image_xscale)/8;
-    image_yscale = image_xscale;
-    image_alpha += ( 0.5 - image_alpha )/8;
-}else if ( objSelect.select == type ) { 
-    image_xscale += ( 1 - image_xscale)/8;
-    image_yscale = image_xscale;
-    image_alpha += ( 1 - image_alpha )/8;
+            <string>if not( trigger2 ) {
+    if ( click ) {
+        image_xscale += ( 0.7 - image_xscale)/8;
+        image_yscale = image_xscale;
+        image_alpha += ( 0.5 - image_alpha )/8;
+    }else if ( objSelect.select == type ) { 
+        image_xscale += ( 1 - image_xscale)/8;
+        image_yscale = image_xscale;
+        image_alpha += ( 1 - image_alpha )/8;
+    }else {
+        image_xscale += ( 0.8 - image_xscale)/8;
+        image_yscale = image_xscale;
+        image_alpha += ( 1 - image_alpha )/8;
+    }
 }else {
-    image_xscale += ( 0.8 - image_xscale)/8;
-    image_yscale = image_xscale;
-    image_alpha += ( 1 - image_alpha )/8;
 }
 if(image_alpha &gt; 0.9)
     trigger = true;
 draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 if(trigger)
-draw_sprite_ext(sprite_index, 1, x, y, image_xscale, image_yscale, image_angle, c_white, 1-image_alpha);
+    draw_sprite_ext(sprite_index, 1, x, y, image_xscale, image_yscale, image_angle, c_white, 1-image_alpha);
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,74 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-alarm[1] = 60;
-alpha = 0;
-trigger = false;
-select = 0;
-for(var i = 0 ; i &lt; global.imageMax; i++)
-{
-    select_y[i] = 0;
-}
-alarm[2] = 60*2;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.imageIndex[select] == 0)
-    alarm[2] = 60;
-else
-    alarm[2] = 60*5;
-select++;
-if(select &gt;= global.imageMax) {
-    select = global.imageMax-1;
-    
-    if(global.gameEnd == true)
-        room_goto(rmEndTree);
-    else
-        instance_create(0, 0, objGotoSelect);    
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>trigger = true;
+            <string>alpha = 0;
 </string>
           </argument>
         </arguments>
@@ -115,16 +48,15 @@ if(select &gt;= global.imageMax) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(trigger)
-    alpha += (1 - alpha)/8;
+            <string>alpha+=0.025;
+draw_set_alpha(alpha);
+draw_set_color(c_white);
+draw_rectangle(0, 0, room_width, room_height, false);
+draw_set_alpha(1);
 
-for(var i = 0 ; i &lt; global.imageMax; i++)
-{
-    if ( i &lt; select )
-    {
-        select_y[i] += (1080 - select_y[i])/8;
-    }
-    draw_sprite(sprImage, global.imageIndex[i], x, select_y[i]);
+
+if(alpha &gt; 1){
+    room_goto(rmSelect);
 }
 </string>
           </argument>
