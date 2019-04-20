@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Instance Create
 instance_create(0, 0, objView);
+instance_create(0, 0, objText);
 </string>
           </argument>
         </arguments>

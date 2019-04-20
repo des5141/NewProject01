@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>5</bbox_left>
-  <bbox_right>57</bbox_right>
-  <bbox_top>2</bbox_top>
-  <bbox_bottom>57</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>49</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>49</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>60</width>
-  <height>60</height>
+  <width>50</width>
+  <height>50</height>
   <frames>
     <frame index="0">images\sprHanSeoul24_0.png</frame>
     <frame index="1">images\sprHanSeoul24_1.png</frame>
@@ -421,52 +421,5 @@
     <frame index="398">images\sprHanSeoul24_398.png</frame>
     <frame index="399">images\sprHanSeoul24_399.png</frame>
     <frame index="400">images\sprHanSeoul24_400.png</frame>
-    <frame index="401">images\sprHanSeoul24_401.png</frame>
-    <frame index="402">images\sprHanSeoul24_402.png</frame>
-    <frame index="403">images\sprHanSeoul24_403.png</frame>
-    <frame index="404">images\sprHanSeoul24_404.png</frame>
-    <frame index="405">images\sprHanSeoul24_405.png</frame>
-    <frame index="406">images\sprHanSeoul24_406.png</frame>
-    <frame index="407">images\sprHanSeoul24_407.png</frame>
-    <frame index="408">images\sprHanSeoul24_408.png</frame>
-    <frame index="409">images\sprHanSeoul24_409.png</frame>
-    <frame index="410">images\sprHanSeoul24_410.png</frame>
-    <frame index="411">images\sprHanSeoul24_411.png</frame>
-    <frame index="412">images\sprHanSeoul24_412.png</frame>
-    <frame index="413">images\sprHanSeoul24_413.png</frame>
-    <frame index="414">images\sprHanSeoul24_414.png</frame>
-    <frame index="415">images\sprHanSeoul24_415.png</frame>
-    <frame index="416">images\sprHanSeoul24_416.png</frame>
-    <frame index="417">images\sprHanSeoul24_417.png</frame>
-    <frame index="418">images\sprHanSeoul24_418.png</frame>
-    <frame index="419">images\sprHanSeoul24_419.png</frame>
-    <frame index="420">images\sprHanSeoul24_420.png</frame>
-    <frame index="421">images\sprHanSeoul24_421.png</frame>
-    <frame index="422">images\sprHanSeoul24_422.png</frame>
-    <frame index="423">images\sprHanSeoul24_423.png</frame>
-    <frame index="424">images\sprHanSeoul24_424.png</frame>
-    <frame index="425">images\sprHanSeoul24_425.png</frame>
-    <frame index="426">images\sprHanSeoul24_426.png</frame>
-    <frame index="427">images\sprHanSeoul24_427.png</frame>
-    <frame index="428">images\sprHanSeoul24_428.png</frame>
-    <frame index="429">images\sprHanSeoul24_429.png</frame>
-    <frame index="430">images\sprHanSeoul24_430.png</frame>
-    <frame index="431">images\sprHanSeoul24_431.png</frame>
-    <frame index="432">images\sprHanSeoul24_432.png</frame>
-    <frame index="433">images\sprHanSeoul24_433.png</frame>
-    <frame index="434">images\sprHanSeoul24_434.png</frame>
-    <frame index="435">images\sprHanSeoul24_435.png</frame>
-    <frame index="436">images\sprHanSeoul24_436.png</frame>
-    <frame index="437">images\sprHanSeoul24_437.png</frame>
-    <frame index="438">images\sprHanSeoul24_438.png</frame>
-    <frame index="439">images\sprHanSeoul24_439.png</frame>
-    <frame index="440">images\sprHanSeoul24_440.png</frame>
-    <frame index="441">images\sprHanSeoul24_441.png</frame>
-    <frame index="442">images\sprHanSeoul24_442.png</frame>
-    <frame index="443">images\sprHanSeoul24_443.png</frame>
-    <frame index="444">images\sprHanSeoul24_444.png</frame>
-    <frame index="445">images\sprHanSeoul24_445.png</frame>
-    <frame index="446">images\sprHanSeoul24_446.png</frame>
-    <frame index="447">images\sprHanSeoul24_447.png</frame>
   </frames>
 </sprite>

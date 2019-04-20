@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Variable Init
 randomize();
+global.story_depth = 0;
 </string>
           </argument>
         </arguments>

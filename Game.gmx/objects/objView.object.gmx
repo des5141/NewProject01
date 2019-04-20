@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -30,19 +30,14 @@
 if not( view_enabled ) {
     view_visible[0] = true;
     view_enabled = true;
+    view_wview[0] = 1920;
+    view_hview[0] = 1080;
 }
 
 // View size scaling
 switch(os_type) {
     case os_windows:
-        view_wview[0] = 1280;
-        view_hview[0] = 720;
-        window_set_size(view_wview[0], view_hview[0]);
-        break;
-        
-    default:
-        view_wview[0] = room_width;
-        view_hview[0] = room_height;
+        window_set_size(1280, 720);
         break;
 }
 </string>

@@ -95,13 +95,18 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\sprHangul50</sprite>
+    <sprite>sprites\sprHangul60</sprite>
+    <sprite>sprites\sprHangul120</sprite>
+    <sprite>sprites\sprEng24</sprite>
+    <sprite>sprites\sprEng60</sprite>
+    <sprite>sprites\sprEng50</sprite>
+    <sprite>sprites\sprEng120</sprite>
+    <sprite>sprites\sprDoor</sprite>
     <sprite>sprites\sprEngSlant</sprite>
     <sprite>sprites\sprHanH12</sprite>
     <sprite>sprites\sprHangul24</sprite>
     <sprite>sprites\sprYayoC64</sprite>
-    <sprite>sprites\sprHanSeoul24</sprite>
-    <sprite>sprites\sprEngSeoul24</sprite>
-    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgIntro</background>
@@ -183,6 +188,7 @@
   <objects name="objects">
     <object>objects\objFirstStart</object>
     <object>objects\objInit</object>
+    <object>objects\objText</object>
     <object>objects\objView</object>
     <object>objects\objTree</object>
     <objects name="Start">
@@ -196,6 +202,9 @@
     </objects>
     <objects name="Ingame">
       <object>objects\objSelect</object>
+      <object>objects\objDoor</object>
+      <object>objects\objBackground</object>
+      <object>objects\objGotoBackground</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -206,6 +215,7 @@
     <room>rooms\rmInterduce</room>
     <rooms name="Ingame">
       <room>rooms\rmSelect</room>
+      <room>rooms\rmBackground</room>
     </rooms>
     <room>rooms\rmEndTree</room>
   </rooms>

@@ -232,7 +232,7 @@ if ( step[3] &gt; 0 ) {
         click = false;
     }
 }
-hj_change_font_ext(sprHanSeoul24, sprEngSeoul24, 60, 60, 14, 24);
+hj_change_font_ext(sprHangul60, sprEng60, 60, 60, 35, 60);
 draw_set_color(c_black);
 hj_set_align(fa_center, fa_middle)
 if(nonickname == "") {
@@ -244,12 +244,11 @@ hj_draw(room_width/2 + shakeit, room_height/2 + 40 - ease_in_out_back((1/120)*st
 }
 draw_set_alpha(ease_in_out_cubic((1/60)*step[3]));
 
-// 120
-hj_change_font_ext(sprHanSeoul24, sprEngSeoul24, 60, 60, 14, 24);
+hj_change_font_ext(sprHangul120, sprEng120, 120, 120, 70, 120);
 hj_draw(room_width/2, room_height/2 + 45, global.nickname + ttokttak, c_black, ease_in_out_cubic((1/60)*step[3]));
-//draw_set_font(global.font[30]);
+hj_change_font_ext(sprHangul50, sprEng50, 50, 50, 29, 50);
 hj_draw(room_width/2, 50, "화면의 아무곳을 눌러#당신의 이름을 입력하세요", c_black, ease_in_out_cubic((1/60)*step[3]));
-//draw_set_font(global.font[60]);
+hj_change_font_ext(sprHangul60, sprEng60, 60, 60, 35, 60);
 draw_rectangle(0, room_height - 110, room_width, room_height, false);
 draw_set_color(c_white);
 if ( click == true )
