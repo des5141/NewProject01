@@ -93,7 +93,10 @@
   <NewExtensions>
     <extension index="0">extensions\johab_mann</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndNormal</sound>
+    <sound>sound\sndDie</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprHangul50</sprite>
     <sprite>sprites\sprHangul60</sprite>
@@ -111,6 +114,7 @@
     <sprite>sprites\sprO</sprite>
     <sprite>sprites\sprOpenDoor</sprite>
     <sprite>sprites\sprImage</sprite>
+    <sprite>sprites\sprite24</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgIntro</background>

@@ -126,6 +126,8 @@ for(var i = 0 ; i &lt; global.imageMax; i++)
     }
     draw_sprite(sprImage, global.imageIndex[i], x, select_y[i]);
 }
+hj_set_align(fa_left, fa_top)
+hj_draw(10, 10, global.tree[global.tree_length-1], c_white, 1);
 </string>
           </argument>
         </arguments>

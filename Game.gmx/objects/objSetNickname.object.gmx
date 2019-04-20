@@ -180,7 +180,7 @@ if ( global.nickname = "" ) {
     shake = 10;
     nonickname = "얘가 아주 싸가지도 없이#내 이름을 사용하려고? 앙?";
     nonickname_color = c_red;
-}if ( string_pos(global.nickname, "손잡이") != 0) {
+}else if ( string_pos(global.nickname, "손잡이") != 0) {
     shake = 10;
     nonickname = "손잡이로 뭘 하려고?";
     nonickname_color = c_orange;
@@ -258,7 +258,11 @@ hj_set_align(fa_center, fa_middle)
 if(nonickname == "") {
 hj_draw(room_width/2, room_height/2 - 40 - ease_in_out_back((1/120)*step[2])*300, "안녕? 친구야", c_black, ease_in_cubic((1/60)*min(60, step[0])));
 draw_set_alpha(ease_in_cubic((1/60)*min(60, step[1])));
+if(global.asdf == false)
 hj_draw(room_width/2, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, "너의 이름은 뭐니?", c_black, ease_in_cubic((1/60)*min(60, step[1])));
+else
+hj_draw(room_width/2, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, "낯이 익다?", c_black, ease_in_cubic((1/60)*min(60, step[1])));
+
 }else {
 hj_set_align(fa_center, fa_top)
 hj_draw(room_width/2 + shakeit, room_height/2 + 40 - ease_in_out_back((1/120)*step[2])*300, nonickname, nonickname_color, 1);

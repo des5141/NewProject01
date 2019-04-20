@@ -66,15 +66,15 @@ switch(global.mySelect) {
     case 1:
         if(type == 1) {
             imageAdd(0);
-            imageAdd(3);
+            imageAdd(15);
             imageAdd(0);
-            scTreeAdd("어느 단란한 가정에 태어났다", c_white);
+            scTreeAdd("어느 단란한 평범한 가정에서 태어났다", c_white);
             global.mySelect = 2;
         } else{
             imageAdd(0);
-            imageAdd(3);
+            imageAdd(15);
             imageAdd(0);
-            scTreeAdd("외국인 가족에게 입양되었다", c_orange);
+            scTreeAdd("다부모 가정에 입양되었다. 버려지지않아 행복하다.", c_orange);
             global.mySelect = 2;
         }
         break;
@@ -89,7 +89,7 @@ switch(global.mySelect) {
             imageAdd(0);
             imageAdd(2);
             imageAdd(0);
-            scTreeAdd("면접 본 고등학교를 아싸로 보냈다.. 외로웠다..", c_gray);
+            scTreeAdd("학교를 가지 않았더니, 주변 어르신들이 삿대질했다", c_gray);
             global.mySelect = 5;
         }
         break;
@@ -105,25 +105,26 @@ switch(global.mySelect) {
             imageAdd(0);
             imageAdd(7);
             imageAdd(0);
-            scTreeAdd("회사를 다니기 시작했다", c_white);
+            scTreeAdd("'SK'에 다니기 시작했다", c_white);
             global.mySelect = 4;
         }
         break;
     case 4:
         if(type == 1) {
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
             imageAdd(0);
             imageAdd(4);
             imageAdd(5);
-            imageAdd(6);
             imageAdd(0);
             scTreeAdd("그동안 모은 돈을 주식으로 전부 날려 강에 몸을 마겼다", c_red);
             global.gameEnd = true;
         } else{
             imageAdd(0);
-            imageAdd(7);
+            imageAdd(9);
             imageAdd(0);
-            scTreeAdd("갑자기 닭값이 올라 손해가 커져 망해버렸다", c_red);
-            global.gameEnd = true;
+            scTreeAdd("주식을 안했더니 집을 살 돈이 모였다", c_white);
+            global.mySelect = 9;
         }
         break;
         
@@ -136,6 +137,8 @@ switch(global.mySelect) {
             
             global.mySelect = 6;
         } else{
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
             imageAdd(0);
             imageAdd(5);
             imageAdd(11);
@@ -150,7 +153,7 @@ switch(global.mySelect) {
             imageAdd(0);
             imageAdd(7);
             imageAdd(0);
-            scTreeAdd("취업을 하였다", c_white);
+            scTreeAdd("1억이 넘는 곳에 취업을 시도하였으나, 실패했다", c_white);
             
             global.mySelect = 7;
         } else{
@@ -169,37 +172,64 @@ switch(global.mySelect) {
             imageAdd(9);
             imageAdd(6);
             imageAdd(0);
-            scTreeAdd("창업을 하였다", c_white);
+            scTreeAdd("동네에 치킨집을 크게 창업 하였다", c_white);
             global.mySelect = 8;
         } else{
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
             imageAdd(0);
-            imageAdd(11);
+            imageAdd(3);
             imageAdd(0);
-            scTreeAdd("백수로 살다가 부모님의 등짝스매시로 인해 심장마비사 했다.", c_red);
+            scTreeAdd("오매떡을 먹다 목에 막혀 죽었다 - 오매 ~~ 죽은 것~~", c_red);
             global.gameEnd = true;
         }
         break;
         
     case 8:
         if(type == 1) {
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
             imageAdd(0);
             imageAdd(9);
             imageAdd(4);
             imageAdd(5);
             imageAdd(11);
             imageAdd(0);
-            scTreeAdd("주식 투자에 실패하여, 강에서 뛰어내렸다.", c_red);
+            scTreeAdd("친구와 같이한 주식이 걸레짝되어, 강에서 뛰어내렸다.", c_red);
             global.gameEnd = true;
         } else{
             imageAdd(0);
-            imageAdd(4);
+            imageAdd(9);
+            imageAdd(0);
+            scTreeAdd("주식을 안했더니 집을 살 돈이 모였다", c_white);
+            global.mySelect = 9;
+        }
+        break;   
+        
+    
+    case 9:
+        if(type == 1) {
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
+            imageAdd(0);
+            imageAdd(12);
+            imageAdd(13);
             imageAdd(5);
             imageAdd(11);
             imageAdd(0);
-            scTreeAdd("사업이 망해, 강에서 뛰어내렸다.", c_red);
+            scTreeAdd("반려자에게 돈을 뜯기고 강에서 밀쳐졌다.", c_red);
+            global.gameEnd = true;
+        } else{
+            audio_stop_all()
+            audio_play_sound(sndDie, 0, true);
+            imageAdd(0);
+            imageAdd(5);
+            imageAdd(11);
+            imageAdd(0);
+            scTreeAdd("외로워서 사망했다", c_red);
             global.gameEnd = true;
         }
-        break;   
+        break;  
 }
 
 instance_create(0, 0, objGotoBackground);

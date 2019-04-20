@@ -50,6 +50,7 @@ global.main_text[7] = "창업을 할까요?"
 
 // 없는 분기
 global.main_text[8] = "주식에 손을 델까요?"
+global.main_text[9] = "연애를 할까요?"
 </string>
           </argument>
         </arguments>
