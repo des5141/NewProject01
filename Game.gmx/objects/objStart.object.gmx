@@ -118,7 +118,7 @@ alpha2 += (1 - alpha2)/30;
 
 hj_change_font_ext(sprHangul120, sprEng120, 120, 120, 70, 120);
 hj_set_align(fa_center, fa_middle)
-hj_draw_transformed(room_width/2, room_height/2, "THE 인생", xscale, xscale, 0, c_white, alpha);
+hj_draw_transformed(room_width/2, room_height/2, "THE LIFE", xscale, xscale, 0, c_white, alpha);
 hj_change_font_ext(sprHangul60, sprEng60, 60, 60, 35, 60);
 hj_draw_transformed(room_width/2, room_height/2 + 400, "-- Touch to start --", 1, 1, 0, c_black, alpha2);
 

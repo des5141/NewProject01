@@ -81,7 +81,7 @@ switch(global.mySelect) {
     case 2:
         if(type == 1) {
             imageAdd(0);
-            imageAdd(9);
+            imageAdd(8);
             imageAdd(0);
             scTreeAdd("학교생활은 충실히 잘했다. 친구도 많았다.", c_white);
             global.mySelect = 3;
@@ -220,13 +220,10 @@ switch(global.mySelect) {
             scTreeAdd("반려자에게 돈을 뜯기고 강에서 밀쳐졌다.", c_red);
             global.gameEnd = true;
         } else{
-            audio_stop_all()
-            audio_play_sound(sndDie, 0, true);
             imageAdd(0);
-            imageAdd(5);
-            imageAdd(11);
+            imageAdd(16);
             imageAdd(0);
-            scTreeAdd("외로워서 사망했다", c_red);
+            scTreeAdd("혼자 살다 행복하게 죽었다 - 해피엔딩 성공!!!", c_aqua);
             global.gameEnd = true;
         }
         break;  

@@ -193,7 +193,6 @@
     </scripts>
     <script>scripts\imageAdd.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\objFirstStart</object>
     <object>objects\objInit</object>
@@ -219,6 +218,7 @@
     <object>objects\object14</object>
     <object>objects\object15</object>
     <object>objects\objOpenDoor</object>
+    <object>objects\objThanks</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmBasic</room>
@@ -231,6 +231,7 @@
       <room>rooms\rmBackground</room>
     </rooms>
     <room>rooms\rmEndTree</room>
+    <room>rooms\rmThanks</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
