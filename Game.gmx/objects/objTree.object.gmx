@@ -54,6 +54,8 @@ for(var i = 0; i &lt; global.tree_length; i++) {
             <kind>1</kind>
             <string>/// Draw
 draw_set_font(global.font[50]);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 y += ((global.tree_select*60) - y)/8;
 for(var i = 0; i &lt; global.tree_length; i++) {
     if ( i == global.tree_select )

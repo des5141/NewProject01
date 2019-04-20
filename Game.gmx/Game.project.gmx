@@ -90,22 +90,123 @@
       <filename>NanumSquareRoundB.ttf</filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\johab_mann</extension>
+  </NewExtensions>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprEngSlant</sprite>
+    <sprite>sprites\sprHanH12</sprite>
+    <sprite>sprites\sprHangul24</sprite>
+    <sprite>sprites\sprYayoC64</sprite>
+    <sprite>sprites\sprHanSeoul24</sprite>
+    <sprite>sprites\sprEngSeoul24</sprite>
+    <sprite>sprites\sprite6</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgIntro</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scTreeAdd.gml</script>
+    <scripts name="easing_library">
+      <script>scripts\ease_in_quad.gml</script>
+      <script>scripts\ease_out_quad.gml</script>
+      <script>scripts\ease_in_out_quad.gml</script>
+      <script>scripts\ease_in_cubic.gml</script>
+      <script>scripts\ease_out_cubic.gml</script>
+      <script>scripts\ease_in_out_cubic.gml</script>
+      <script>scripts\ease_in_quartic.gml</script>
+      <script>scripts\ease_out_quartic.gml</script>
+      <script>scripts\ease_in_out_quartic.gml</script>
+      <script>scripts\ease_in_quintic.gml</script>
+      <script>scripts\ease_out_quintic.gml</script>
+      <script>scripts\ease_in_out_quintic.gml</script>
+      <script>scripts\ease_in_sine.gml</script>
+      <script>scripts\ease_out_sine.gml</script>
+      <script>scripts\ease_in_out_sine.gml</script>
+      <script>scripts\ease_in_expo.gml</script>
+      <script>scripts\ease_out_expo.gml</script>
+      <script>scripts\ease_in_out_expo.gml</script>
+      <script>scripts\ease_in_circ.gml</script>
+      <script>scripts\ease_out_circ.gml</script>
+      <script>scripts\ease_in_out_circ.gml</script>
+      <script>scripts\ease_in_elastic.gml</script>
+      <script>scripts\ease_out_elastic.gml</script>
+      <script>scripts\ease_in_out_elastic.gml</script>
+      <script>scripts\ease_in_back.gml</script>
+      <script>scripts\ease_out_back.gml</script>
+      <script>scripts\ease_in_out_back.gml</script>
+      <script>scripts\ease_in_bounce.gml</script>
+      <script>scripts\ease_out_bounce.gml</script>
+      <script>scripts\ease_in_out_bounce.gml</script>
+    </scripts>
+    <scripts name="JOHAB_RENDER">
+      <scripts name="compat">
+        <script>scripts\hj_comp_set.gml</script>
+        <script>scripts\hj_draw_comp.gml</script>
+        <script>scripts\hj_draw_comp_sheet.gml</script>
+        <script>scripts\hj_draw_comp_transformed.gml</script>
+        <script>scripts\hj_draw_comp_ext.gml</script>
+        <script>scripts\hj_draw_comp_raw.gml</script>
+      </scripts>
+      <scripts name="dkb884">
+        <script>scripts\hj_dkb_compile_str.gml</script>
+        <script>scripts\hj_change_font.gml</script>
+        <script>scripts\hj_change_font_ext.gml</script>
+        <script>scripts\hj_draw_sheet.gml</script>
+        <script>scripts\hj_draw.gml</script>
+        <script>scripts\hj_draw_transformed.gml</script>
+        <script>scripts\hj_draw_ext.gml</script>
+        <script>scripts\hj_draw_raw.gml</script>
+      </scripts>
+      <scripts name="internal">
+        <script>scripts\hj_init_old.gml</script>
+        <script>scripts\hj_gen_table.gml</script>
+        <script>scripts\hj_gen_table_jamo.gml</script>
+        <script>scripts\hj_comp_calc_beol.gml</script>
+        <script>scripts\hj_string_width_line_adv.gml</script>
+        <script>scripts\hj_string_width_adv.gml</script>
+        <script>scripts\hj_string_get_first_line.gml</script>
+        <script>scripts\hj_string_width_raw.gml</script>
+        <script>scripts\hj_string_width_line_raw.gml</script>
+      </scripts>
+      <script>scripts\hj_init.gml</script>
+      <script>scripts\hj_string_width.gml</script>
+      <script>scripts\hj_string_width_line.gml</script>
+      <script>scripts\hj_string_height.gml</script>
+      <script>scripts\hj_set_align.gml</script>
+      <script>scripts\hj_end.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
+    <object>objects\objFirstStart</object>
     <object>objects\objInit</object>
     <object>objects\objView</object>
     <object>objects\objTree</object>
+    <objects name="Start">
+      <object>objects\objStart</object>
+    </objects>
+    <objects name="SetNickname">
+      <object>objects\objSetNickname</object>
+    </objects>
+    <objects name="Interduce">
+      <object>objects\objInterduce</object>
+    </objects>
+    <objects name="Ingame">
+      <object>objects\objSelect</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmBasic</room>
     <room>rooms\rmInit</room>
     <room>rooms\rmStart</room>
+    <room>rooms\rmSetNickname</room>
+    <room>rooms\rmInterduce</room>
+    <rooms name="Ingame">
+      <room>rooms\rmSelect</room>
+    </rooms>
     <room>rooms\rmEndTree</room>
   </rooms>
   <help>
